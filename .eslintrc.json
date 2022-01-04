@@ -1,0 +1,49 @@
+{
+    "env": {
+        "browser": true,
+        "es2021": true,
+        "node": true
+    },
+    "extends": [
+        "plugin:react/recommended",
+        "airbnb-typescript",
+        "plugin:@typescript-eslint/recommended",
+        "plugin:@typescript-eslint/recommended-requiring-type-checking",
+        "prettier"
+    ],
+    "parser": "@typescript-eslint/parser",
+    "parserOptions": {
+        "ecmaFeatures": {
+            "jsx": true
+        },
+        "ecmaVersion": 12,
+        "sourceType": "module",
+        "project": "./tsconfig.json"
+    },
+    "plugins": ["react", "@typescript-eslint"],
+    "rules": {
+        "@typescript-eslint/no-use-before-define": "off",
+        "@typescript-eslint/no-floating-promises": "off",
+        "@typescript-eslint/require-await": "off",
+        "@typescript-eslint/member-delimiter-style": [
+            "error",
+            {
+                "multiline": {
+                    "delimiter": "semi",
+                    "requireLast": true
+                },
+                "singleline": {
+                    "delimiter": "semi",
+                    "requireLast": false
+                }
+            }
+        ],
+        "import/prefer-default-export": "off",
+        "import/extensions": "off",
+        "react/prop-types": "off",
+        "arrow-body-style": "off",
+        "class-methods-use-this": "off",
+        "no-use-before-define": "off",
+        "no-console": "off"
+    }
+}
